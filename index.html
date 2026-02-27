@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Dark mode toggle button -->
+    <button id="darkModeToggle" class="dark-mode-toggle" title="Toggle dark mode">
+        <span class="mode-icon">🌙</span>
+    </button>
+
+    <div class="container">
+        <!-- Main card -->
+        <div class="card">
+            <h1 class="title">Age Calculator</h1>
+            <p class="subtitle">Find out your exact age in years, months, and days</p>
+
+            <!-- Input section -->
+            <div class="input-section">
+                <div class="form-group">
+                    <label for="dateOfBirth" class="label">Date of Birth</label>
+                    <input 
+                        type="date" 
+                        id="dateOfBirth" 
+                        class="date-input" 
+                        placeholder="Select your date of birth"
+                    >
+                </div>
+
+                <!-- Button group -->
+                <div class="button-group">
+                    <button id="calculateBtn" class="btn btn-primary">Calculate Age</button>
+                    <button id="resetBtn" class="btn btn-secondary">Reset</button>
+                </div>
+            </div>
+
+            <!-- Error message section -->
+            <div id="errorMessage" class="error-message"></div>
+
+            <!-- Result section -->
+            <div id="resultContainer" class="result-container" style="display: none;">
+                <div class="result-card">
+                    <div class="result-item">
+                        <span class="result-value" id="years">0</span>
+                        <span class="result-label">Years</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-value" id="months">0</span>
+                        <span class="result-label">Months</span>
+                    </div>
+                    <div class="result-item">
+                        <span class="result-value" id="days">0</span>
+                        <span class="result-label">Days</span>
+                    </div>
+                </div>
+                <p id="resultText" class="result-text"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
